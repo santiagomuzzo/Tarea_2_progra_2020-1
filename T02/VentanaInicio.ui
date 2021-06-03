@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>584</width>
+    <height>457</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QLabel" name="Logo">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>100</y>
+     <width>341</width>
+     <height>131</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>sprites/otros/logo_negro.png</pixmap>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelincial">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>250</y>
+     <width>501</width>
+     <height>91</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:14pt; font-weight:600; color:#005500;&quot;&gt;¡Bienvenido al mejor café virtual del DCC!&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </widget>
+  <widget class="QWidget" name="horizontalLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>49</x>
+     <y>349</y>
+     <width>481</width>
+     <height>91</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QPushButton" name="seguir_jugando">
+      <property name="text">
+       <string>Seguir Jugando</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="comenzar_de_nuevo">
+      <property name="text">
+       <string>Comenzar de nuevo</string>
+      </property>
+      <property name="autoDefault">
+       <bool>false</bool>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>comenzar_de_nuevo</sender>
+   <signal>clicked()</signal>
+   <receiver>Form</receiver>
+   <slot>new_game()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>410</x>
+     <y>393</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>291</x>
+     <y>246</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>seguir_jugando</sender>
+   <signal>clicked()</signal>
+   <receiver>Form</receiver>
+   <slot>continue_game()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>167</x>
+     <y>393</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>291</x>
+     <y>246</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>continue_game()</slot>
+  <slot>new_game()</slot>
+ </slots>
+</ui>
